@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> social card </title>
+    <title> social card </title>
 </head>
 <body>
     
     
-	<div id="root"> </div>
-	<script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+    <div id="root"> </div>
+    <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
 
@@ -16,20 +16,20 @@
 
     <script type="text/babel">
 
-    	const rootElement = document.getElementById('root');
+        const rootElement = document.getElementById('root');
 
 function Card(props) {
     const [img, setimg] = React.useState(props.img);
 
 
-    			return (
+                return (
                     
                     <div className="gradient">
                     <div className="card">
                         <img src={img}/>
                         <div className="nameclass">
                             <h1>
-                            {this.props.name}
+                            {props.name}
                             </h1>
                         </div>
                         <div className="signsimg">
@@ -61,11 +61,11 @@ function Card(props) {
                     </div>
             );
 
-    		
-    	}
+            
+        }
 
-    	ReactDOM.render(
-    		<Card 
+        ReactDOM.render(
+            <Card 
                 img="avatar.png"
                 name= "raiza cibrian"
                 imgsun="imgsag.png"
@@ -77,9 +77,9 @@ function Card(props) {
                 text =" disney lover and huge swiftie"
                 funfact ="ex med student"
             />,
-    		rootElement
-    	)
-    	
+            rootElement
+        )
+        
     </script>
 </body>
 </html>
