@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> social card </title>
+</head>
+<body>
+    
+    
+	<div id="root"> </div>
+	<script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+
+    <link rel ="stylesheet" type ="text/css" href ="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+
+    <script type="text/babel">
+
+    	const rootElement = document.getElementById('root');
+
+    	class Card extends React.Component {
+    		render(){
+    			return (
+                    
+                    <div className="gradient"> 
+                    <div className="card">
+                        <img src={this.props.img}/>
+                        <div className="nameclass">
+                            <h1>
+                            {this.props.name}
+                            </h1>
+                        </div>
+                        <div className="signsimg">
+                            <img src={this.props.imgsun}/>
+                            <img src={this.props.imgmoon}/>
+                            <img src={this.props.imgasc}/>
+                        </div>
+                        <div className="signs">
+                            <h2>
+                             sun: {this.props.sunsign}
+                            </h2>
+                            <h2>
+                             moon: {this.props.moonsign}
+                            </h2>
+                            <h2>
+                             ascendant: {this.props.ascendantsign}
+                            </h2>
+                        </div>
+                       
+                        <div className= "info">
+                                <p>
+                                    {this.props.text}
+                                </p>
+                                <p>
+                                    {this.props.funfact}
+                                </p>
+                        </div>
+                    </div>
+                    </div>
+            );
+
+    		}
+    	}
+
+    	ReactDOM.render(
+    		<Card 
+                img="avatar.png"
+                name= "raiza cibrian"
+                imgsun="imgsag.png"
+                imgmoon="imgcancer.png"
+                imgasc="imgtaurus.png"
+                sunsign= "sagittarius"
+                moonsign ='cancer'
+                ascendantsign ="taurus"
+                text =" disney lover and huge swiftie"
+                funfact ="ex med student"
+            />,
+    		rootElement
+    	)
+    	
+    </script>
+</body>
+</html>
